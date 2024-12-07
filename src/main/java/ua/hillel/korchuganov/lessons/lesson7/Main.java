@@ -1,121 +1,81 @@
 package ua.hillel.korchuganov.lessons.lesson7;
 
+
 import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
 
-//        int[] array = new int[5];
+//    int[] array1 = {1, 2, 3, 4, 5};
+//    int[] array2 = array1;
 //
-//        array[0] = 9;
-//        array[1] = 1;
-//        array[2] = 2;
-//        array[3] = 3;
-//        array[4] = 4;
-
-//        System.out.println(array[0]);
-//        System.out.println(array[1]);
-//        System.out.println(array[2]);
-//        System.out.println(array[3]);
-//        System.out.println(array[4]);
-
-//        System.out.println(array.length);
-
-
-//        for (int i = 0; i < array.length; i++) {
-//            if(array[i] == 3 || array[i] == 4) {
-//                array[i] = 77;
-//            }
-//                System.out.println(array[i]);
-//        }
-
-//        for (int value : array) {
-//            System.out.println(value);
-//        }
-
-//        System.out.println(Arrays.toString(array));
-
-
-//            int[] array = new int[10];
+//        System.out.println(Arrays.toString(array1));
+//        System.out.println(Arrays.toString(array2));
 //
-//        for (int i = 0; i < array.length; i++) {
-//                array[i] = (int) (Math.random() * 11);
-//        }
+////        array2[0] = 99;
 //
-//        for (int i = 0; i < array.length; i++) {
-////            System.out.println("index = " + i);
-////            System.out.println("value = " + array[i]);
-////            System.out.println();
-//
-//            if ( i == array.length-1) {
-//                System.out.print(array[i]);
-//            }else {
-//                System.out.print(array[i] + ", ");
-//            }
+//        System.out.println(Arrays.toString(array1));
+//        System.out.println(Arrays.toString(array2));
 
-        int[] array = new int[5];
-        int array2[] = new int[5];
-        int[] array3 = {1,2,5,6,9};
-        int[] array4 = new int[0];
+        int[] array1 = {1,2,3,4,5};
+        int[] array2 = new int[array1.length];
 
+        for (int i = 0; i < array1.length; i++) {
+            array2[i] = array1[i];
+        }
 
+        System.out.println(Arrays.toString(array1));
+        System.out.println(Arrays.toString(array2));
+        
+        array2[0] = 99;
 
-
-
-
+        System.out.println(Arrays.toString(array1));
+        System.out.println(Arrays.toString(array2));
     }
 
 
-    static void task1() {
-
-//        int[] array = new int[5];
-//
-//        array[0] = 9;
-//        array[1] = 1;
-//        array[2] = 2;
-//        array[3] = 3;
-//        array[4] = 4;
-
-//        System.out.println(array[0]);
-//        System.out.println(array[1]);
-//        System.out.println(array[2]);
-//        System.out.println(array[3]);
-//        System.out.println(array[4]);
-
-//        System.out.println(array.length);
 
 
-//        for (int i = 0; i < array.length; i++) {
-//            if(array[i] == 3 || array[i] == 4) {
-//                array[i] = 77;
-//            }
-//                System.out.println(array[i]);
-//        }
-
-//        for (int value : array) {
-//            System.out.println(value);
-//        }
-
-//        System.out.println(Arrays.toString(array));
 
 
-        int[] array = new int[10];
 
-        for (int i = 0; i < array.length; i++) {
-            array[i] = (int) (Math.random() * 11);
+
+
+
+
+
+
+    static void task1(){
+        int[]  team = new int[10];
+
+        for (int i = 0; i < team.length; i++) {
+            team[i] = (int) (Math.random() * 11);
         }
+        System.out.println(Arrays.toString(team));
 
-        for (int i = 0; i < array.length; i++) {
-//            System.out.println("index = " + i);
-//            System.out.println("value = " + array[i]);
-//            System.out.println();
+        int sumTeam1 = 0;
+        int sumTeam2 = 0;
 
-            if ( i == array.length-1) {
-                System.out.print(array[i]);
+        for (int i = 0; i < team.length; i++) {
+            if(i % 2 == 0) {
+                sumTeam1 += team[i];
             }else {
-                System.out.print(array[i] + ", ");
+                sumTeam2 += team[i];
             }
+        }
+        System.out.println("sumTeam1 " + sumTeam1);
+        System.out.println("sumTeam2 " + sumTeam2);
 
+        if(sumTeam1 > sumTeam2){
+            System.out.println("TEAM 1 WIN");
+        }else if(sumTeam1 < sumTeam2) {
+            System.out.println("TEAM 2 WIN");
+        }else {
+            System.out.println("DRAW");
         }
     }
 }
+
+
+
+
