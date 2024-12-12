@@ -1,4 +1,4 @@
-package ua.hillel.korchuganov.lessons;
+package ua.hillel.korchuganov.lessons.lesson10;
 
 import java.util.Arrays;
 
